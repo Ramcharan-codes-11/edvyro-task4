@@ -1,55 +1,58 @@
-Internship REST API
+# Internship REST API
 
-A simple REST API built using Node.js, Express and SQLite.
+A REST API built with Node.js, Express.js, and SQLite to manage internship records.
 
-Features
+## Features
 
 - List all internships
 - View an internship by ID
-- Add a new internship
+- Add new internships
 - Update internship details
-- Delete an internship
+- Delete internships
 - Input validation and error handling
 - Pagination using page and limit
-- SQLite database for persistent storage
+- SQLite database storage
+- API health-check endpoint
 
-Technologies
+## Technologies
 
 - Node.js
 - Express.js
 - SQLite
 - JavaScript
 
-Run the project
+## API Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | /api/internships | List internships |
+| GET | /api/internships/:id | View one internship |
+| POST | /api/internships | Add an internship |
+| PUT | /api/internships/:id | Update an internship |
+| DELETE | /api/internships/:id | Delete an internship |
+| GET | /health | Check API status |
+
+## Pagination
+
+Example: `/api/internships?page=1&limit=2`
+
+## Run Locally
 
 1. Install Node.js.
-2. Run "npm install".
-3. Run "npm start".
-4. Open "http://localhost:3000/api/internships" in your browser.
-
-API Endpoints
-
-Method| Endpoint| Purpose
-GET| "/api/internships"| List internships
-GET| "/api/internships/:id"| View one internship
-POST| "/api/internships"| Add an internship
-PUT| "/api/internships/:id"| Update an internship
-DELETE| "/api/internships/:id"| Delete an internship
-
-Pagination
-
-Use "/api/internships?page=1&limit=2" to return two records per page.
-## Health Check
-
-Check whether the API is running:
-
-GET /health
-
-A successful response returns HTTP 200 with a JSON status message.
+2. Run `npm install`.
+3. Run `npm start`.
+4. Open `http://localhost:3000/health`.
 
 ## Task 5 Improvements
 
-- Added an API health-check endpoint.
-- Existing internship CRUD API and pagination.
-- Security middleware and API rate limiting.
-- Input validation and error handling.
+- Documented the API health-check endpoint.
+- Listed the CRUD endpoints and pagination.
+- Documented validation and error handling.
+
+## Testing Status
+
+The project code is available on GitHub.
+
+## Repository
+
+https://github.com/Ramcharan-codes-11/edvyro-task4
