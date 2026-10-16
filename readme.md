@@ -39,3 +39,17 @@ DELETE| "/api/internships/:id"| Delete an internship
 Pagination
 
 Use "/api/internships?page=1&limit=2" to return two records per page.
+## Health Check
+
+Check whether the API is running:
+
+GET /health
+
+A successful response returns HTTP 200 with a JSON status message.
+
+## Task 5 Improvements
+
+- Added an API health-check endpoint.
+- Existing internship CRUD API and pagination.
+- Security middleware and API rate limiting.
+- Input validation and error handling.
