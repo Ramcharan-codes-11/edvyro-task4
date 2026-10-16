@@ -165,6 +165,13 @@ app.delete("/api/internships/:id", (req, res) => {
   res.json({ success: true, message: "Internship deleted" });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "ok",
+    message: "Internship API is running"
+  });
+});
+
 app.listen(3000, () => {
   console.log("Internship API running at http://localhost:3000");
 });
